@@ -1,12 +1,14 @@
 import React from "react";
-import "../index.css";
+import { Link } from "react-router-dom";
 
-const ProjectCard = ({ title, icon }) => {
+const ProjectCard = ({ title, icon, link }) => {
   return (
-    <div className="project-card">
-      <span style={{ fontSize: "40px", marginRight: "10px" }}>{icon}</span>
-      <span>{title}</span>
-    </div>
+    <Link to={link} className="project-card">
+      <div className="card-content">
+        <span className="icon">{icon}</span>
+        <span className="title">{title}</span>
+      </div>
+    </Link>
   );
 };
 

@@ -1,8 +1,8 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 
-const ProjectB = () => {
-  return <ProjectCard title="Project B" icon="💡" link="#" />;
+const ProjectC = () => {
+  return <ProjectCard title="Project C" icon="🎨" link="/project-c" />;
 };
 
-export default ProjectB;
+export default ProjectC;
