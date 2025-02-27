@@ -5,9 +5,12 @@ import Footer from "./components/Footer";
 import ProjectA from "./components/ProjectA";
 import ProjectB from "./components/ProjectB";
 import ProjectC from "./components/ProjectC";
-import ProjectAPage from "./pages/ProjectAPage";  // Skapa denna nya sida
-import ProjectBPage from "./pages/ProjectBPage";  // Skapa denna nya sida
-import ProjectCPage from "./pages/ProjectCPage";  // Skapa denna nya sida
+import ProjectAPage from "./pages/ProjectAPage";
+import ProjectBPage from "./pages/ProjectBPage";
+import ProjectCPage from "./pages/ProjectCPage";
+import AboutPage from "./pages/AboutPage";  // ✅ Kolla att den importeras
+import ContactPage from "./pages/ContactPage";
+
 import "./index.css";
 
 function App() {
@@ -16,7 +19,6 @@ function App() {
       <div className="container">
         <Header />
         <Routes>
-          {/* Hem / Startsida med alla projekt */}
           <Route path="/" element={
             <>
               <ProjectA />
@@ -24,11 +26,11 @@ function App() {
               <ProjectC />
             </>
           } />
-          
-          {/* Sidor för varje projekt */}
           <Route path="/project-a" element={<ProjectAPage />} />
           <Route path="/project-b" element={<ProjectBPage />} />
           <Route path="/project-c" element={<ProjectCPage />} />
+          <Route path="/about" element={<AboutPage />} />  {/* ✅ Kolla att denna finns */}
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </div>

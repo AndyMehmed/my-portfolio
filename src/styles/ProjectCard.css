@@ -1,0 +1,73 @@
+.project-card {
+    width: 350px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    height: auto; /* Anpassar kortets höjd efter innehållet */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+.project-image {
+    width: 100%;
+    height: auto; /* Gör att bilden anpassar sig efter sin naturliga höjd */
+    object-fit: contain; /* Förhindrar beskärning */
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.01); /* Bilden zoomar in */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .overlay {
+    opacity: 0; /* Försvinner vid hover */
+}
+
+.title {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.project-card {
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.project-card:hover .project-image {
+    transition: transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1), height 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.project-card {
+    overflow: hidden; /* Hindrar att bilden går utanför kortets gränser */
+    max-height: 400px; /* Sätter en maxhöjd så att det inte växer för mycket */
+}
